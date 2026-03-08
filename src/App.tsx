@@ -49,7 +49,7 @@ function Reveal({
 const heroSlides = [
   {
     image:
-      "https://images.unsplash.com/photo-1590650153855-d9e808231d41?auto=format&fit=crop&w=1920&q=80",
+      "https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=1920&q=80",
     headline: "Crystal-Clear 2-Way Communication",
     sub: "Built for Real Work",
     description:
@@ -57,7 +57,7 @@ const heroSlides = [
   },
   {
     image:
-      "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1920&q=80",
+      "https://images.unsplash.com/photo-1556155092-490a1ba16284?auto=format&fit=crop&w=1920&q=80",
     headline: "Stay Connected Across Every Floor",
     sub: "Retail & Commercial Solutions",
     description:
@@ -65,7 +65,7 @@ const heroSlides = [
   },
   {
     image:
-      "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1920&q=80",
+      "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1920&q=80",
     headline: "Rugged Radios for Tough Sites",
     sub: "Industrial & Construction Ready",
     description:
@@ -297,7 +297,6 @@ export function App() {
     return () => clearInterval(t);
   }, []);
 
-  // Close menu on resize to desktop
   useEffect(() => {
     const fn = () => { if (window.innerWidth >= 1024) setMenuOpen(false); };
     window.addEventListener("resize", fn);
@@ -322,15 +321,13 @@ export function App() {
       ════════════════════════════════════════ */}
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-          scrolled ? "nav-solid shadow-2xl" : "bg-transparent"
+          scrolled ? "bg-white/95 backdrop-blur-md shadow-lg border-b border-gray-100" : "bg-white/80 backdrop-blur-sm"
         }`}
       >
         <div className={W}>
-          {/* Row 1: Logo + Actions */}
           <div className="header-row-1">
             <a href="#top" className="flex items-center gap-2.5 sm:gap-3 group">
-              <span className="logo-mark logo-mark-icon w-[40px] h-[40px] sm:w-[46px] sm:h-[46px] lg:w-[52px] lg:h-[52px] rounded-[14px] bg-gradient-to-br from-[#0d1528] to-[#111d35] border border-white/15 shadow-lg shadow-blue-500/15 flex items-center justify-center shrink-0 relative overflow-hidden transition-all duration-300">
-                <span className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(37,99,235,0.2),transparent_70%)]" />
+              <span className="logo-mark logo-mark-icon w-[40px] h-[40px] sm:w-[46px] sm:h-[46px] lg:w-[52px] lg:h-[52px] rounded-[14px] bg-gradient-to-br from-blue-600 to-purple-600 border border-blue-200 shadow-lg shadow-blue-500/20 flex items-center justify-center shrink-0 relative overflow-hidden transition-all duration-300">
                 <svg
                   width="22"
                   height="22"
@@ -338,40 +335,34 @@ export function App() {
                   fill="none"
                   className="relative z-10"
                 >
-                  <circle cx="13" cy="13" r="3" fill="url(#lg)" />
-                  <path d="M8.5 8.5a6.5 6.5 0 0 1 9 0" stroke="url(#lg)" strokeWidth="1.5" strokeLinecap="round" opacity=".9" />
-                  <path d="M5.5 5.5a10.5 10.5 0 0 1 15 0" stroke="url(#lg)" strokeWidth="1.5" strokeLinecap="round" opacity=".5" />
-                  <path d="M17.5 17.5a6.5 6.5 0 0 1-9 0" stroke="url(#lg)" strokeWidth="1.5" strokeLinecap="round" opacity=".9" />
-                  <path d="M20.5 20.5a10.5 10.5 0 0 1-15 0" stroke="url(#lg)" strokeWidth="1.5" strokeLinecap="round" opacity=".5" />
-                  <defs>
-                    <linearGradient id="lg" x1="0" y1="0" x2="26" y2="26">
-                      <stop stopColor="#60a5fa" />
-                      <stop offset="1" stopColor="#22c55e" />
-                    </linearGradient>
-                  </defs>
+                  <circle cx="13" cy="13" r="3" fill="white" />
+                  <path d="M8.5 8.5a6.5 6.5 0 0 1 9 0" stroke="white" strokeWidth="1.5" strokeLinecap="round" opacity=".9" />
+                  <path d="M5.5 5.5a10.5 10.5 0 0 1 15 0" stroke="white" strokeWidth="1.5" strokeLinecap="round" opacity=".5" />
+                  <path d="M17.5 17.5a6.5 6.5 0 0 1-9 0" stroke="white" strokeWidth="1.5" strokeLinecap="round" opacity=".9" />
+                  <path d="M20.5 20.5a10.5 10.5 0 0 1-15 0" stroke="white" strokeWidth="1.5" strokeLinecap="round" opacity=".5" />
                 </svg>
               </span>
               <span className="flex flex-col">
                 <span className="flex items-center">
-                  <span className="logo-copy transition-all duration-300">Copy</span>
-                  <span className="logo-slash transition-all duration-300" />
-                  <span className="logo-that-shimmer transition-all duration-300">That</span>
+                  <span className="text-gray-900 font-black text-[18px] sm:text-[20px] tracking-tight">Copy</span>
+                  <span className="mx-1 text-blue-400 font-light">/</span>
+                  <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent font-black text-[18px] sm:text-[20px] tracking-tight">That</span>
                 </span>
-                <span className="logo-subtitle mt-[2px]">2-Way Communications</span>
+                <span className="text-[9px] sm:text-[10px] text-gray-500 font-semibold tracking-wider uppercase">2-Way Communications</span>
               </span>
             </a>
 
             <div className="hidden lg:flex items-center gap-3">
-              <a href="#packages" className="px-5 py-2.5 rounded-full border border-white/20 bg-white/10 text-white font-bold text-[14px] hover:bg-white/15 transition-all">
+              <a href="#packages" className="px-5 py-2.5 rounded-full border border-gray-200 bg-white text-gray-700 font-bold text-[14px] hover:bg-gray-50 hover:border-gray-300 transition-all">
                 View Packages
               </a>
-              <a href="#contact" className="px-6 py-2.5 rounded-full bg-gradient-to-r from-accent to-accent2 text-white font-bold text-[14px] shadow-lg shadow-blue-600/25 hover:shadow-xl hover:-translate-y-0.5 transition-all">
+              <a href="#contact" className="px-6 py-2.5 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold text-[14px] shadow-lg shadow-blue-600/25 hover:shadow-xl hover:-translate-y-0.5 transition-all">
                 Get a Quote
               </a>
             </div>
 
             <button
-              className="lg:hidden px-3 py-2.5 rounded-full border border-white/20 bg-white/10 text-white text-lg cursor-pointer"
+              className="lg:hidden px-3 py-2.5 rounded-full border border-gray-200 bg-white text-gray-700 text-lg cursor-pointer"
               onClick={() => setMenuOpen(!menuOpen)}
               aria-label="Toggle menu"
             >
@@ -379,32 +370,30 @@ export function App() {
             </button>
           </div>
 
-          {/* Row 2: Desktop nav */}
-          <nav className="header-row-2" aria-label="Primary navigation">
+          <nav className="hidden lg:flex items-center justify-center gap-8 py-3 border-t border-gray-100" aria-label="Primary navigation">
             {navLinks.map((l) => (
-              <a key={l.href} href={l.href}>{l.label}</a>
+              <a key={l.href} href={l.href} className="text-gray-600 hover:text-blue-600 font-semibold text-[14px] transition-colors">{l.label}</a>
             ))}
           </nav>
         </div>
 
-        {/* Mobile drawer */}
-        <div className={`lg:hidden mobile-drawer ${menuOpen ? "open" : ""} border-t border-white/10 bg-[rgba(10,16,28,0.95)] backdrop-blur-2xl`}>
+        <div className={`lg:hidden mobile-drawer ${menuOpen ? "open" : ""} border-t border-gray-100 bg-white/95 backdrop-blur-md`}>
           <div className={`${W} py-4 grid gap-2`}>
             {navLinks.map((l) => (
               <a
                 key={l.href}
                 href={l.href}
                 onClick={() => setMenuOpen(false)}
-                className="block px-4 py-3 rounded-2xl border border-white/10 bg-white/5 text-white font-bold text-[14px] active:bg-white/10"
+                className="block px-4 py-3 rounded-2xl border border-gray-100 bg-gray-50 text-gray-700 font-bold text-[14px] active:bg-gray-100"
               >
                 {l.label}
               </a>
             ))}
             <div className="flex gap-3 mt-3">
-              <a href="#packages" onClick={() => setMenuOpen(false)} className="flex-1 text-center px-4 py-3 rounded-2xl border border-white/20 bg-white/10 text-white font-bold text-[14px]">
+              <a href="#packages" onClick={() => setMenuOpen(false)} className="flex-1 text-center px-4 py-3 rounded-2xl border border-gray-200 bg-white text-gray-700 font-bold text-[14px]">
                 Packages
               </a>
-              <a href="#contact" onClick={() => setMenuOpen(false)} className="flex-1 text-center px-4 py-3 rounded-2xl bg-gradient-to-r from-accent to-accent2 text-white font-bold text-[14px]">
+              <a href="#contact" onClick={() => setMenuOpen(false)} className="flex-1 text-center px-4 py-3 rounded-2xl bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold text-[14px]">
                 Quote
               </a>
             </div>
@@ -413,9 +402,9 @@ export function App() {
       </header>
 
       {/* ════════════════════════════════════════
-          HERO
+          HERO - LIGHT THEME
       ════════════════════════════════════════ */}
-      <section id="top" className="relative h-[100svh] min-h-[580px] sm:min-h-[700px] overflow-hidden">
+      <section id="top" className="relative h-[100svh] min-h-[580px] sm:min-h-[700px] overflow-hidden bg-gradient-to-br from-blue-50 via-white to-purple-50">
         {heroSlides.map((slide, i) => (
           <div
             key={i}
@@ -426,27 +415,29 @@ export function App() {
             <img
               src={slide.image}
               alt=""
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover opacity-10"
               style={{ animation: "kenBurns 20s ease-in-out infinite alternate" }}
             />
           </div>
         ))}
-        <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/65 to-black/30" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/50" />
-        <div className="absolute inset-0 bg-[radial-gradient(800px_400px_at_10%_50%,rgba(37,99,235,0.12),transparent_60%)]" />
+        
+        <div className="absolute inset-0 bg-gradient-to-r from-white/95 via-white/90 to-blue-50/95" />
+        <div className="absolute inset-0 bg-gradient-to-b from-white/50 via-transparent to-white/80" />
+        
+        <div className="absolute top-20 right-10 w-72 h-72 bg-blue-400/20 rounded-full blur-3xl" />
+        <div className="absolute bottom-20 left-10 w-96 h-96 bg-purple-400/20 rounded-full blur-3xl" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-br from-blue-200/20 to-purple-200/20 rounded-full blur-3xl" />
 
         <div className="relative z-10 h-full flex items-center">
           <div className={W}>
-            <div className="max-w-2xl pt-16 sm:pt-0">
-              {/* Pill */}
-              <div className="animate-fade-in-up inline-flex items-center gap-2 px-4 py-2 sm:px-5 sm:py-2.5 mb-5 sm:mb-8 rounded-full border border-white/20 bg-white/[0.08] backdrop-blur-md">
-                <span className="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-gradient-to-br from-accent to-accent2 animate-pulse" />
-                <span className="text-white/90 font-semibold text-[11px] sm:text-[13px] tracking-wide">
+            <div className="max-w-3xl pt-24 sm:pt-16">
+              <div className="animate-fade-in-up inline-flex items-center gap-2 px-4 py-2 sm:px-5 sm:py-2.5 mb-5 sm:mb-8 rounded-full border border-blue-200 bg-white/90 backdrop-blur-md shadow-lg shadow-blue-100/50">
+                <span className="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-gradient-to-br from-blue-500 to-green-500 animate-pulse" />
+                <span className="text-gray-700 font-semibold text-[11px] sm:text-[13px] tracking-wide">
                   Trusted 2-Way Radio Solutions
                 </span>
               </div>
 
-              {/* Slide content */}
               {heroSlides.map((slide, i) => (
                 <div
                   key={i}
@@ -458,13 +449,13 @@ export function App() {
                 >
                   {activeSlide === i && (
                     <>
-                      <h1 className="animate-fade-in-up-delay-1 text-white font-black text-[32px] sm:text-[48px] md:text-[56px] lg:text-[68px] leading-[1.05] tracking-[-0.03em] mb-3">
+                      <h1 className="animate-fade-in-up-delay-1 text-gray-900 font-black text-[32px] sm:text-[48px] md:text-[56px] lg:text-[72px] leading-[1.05] tracking-[-0.03em] mb-3">
                         {slide.headline}
                       </h1>
-                      <p className="animate-fade-in-up-delay-2 font-bold text-[16px] sm:text-[20px] md:text-[24px] mb-4 sm:mb-5 tracking-tight gradient-text">
+                      <p className="animate-fade-in-up-delay-2 font-bold text-[16px] sm:text-[20px] md:text-[24px] mb-4 sm:mb-5 tracking-tight bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
                         {slide.sub}
                       </p>
-                      <p className="animate-fade-in-up-delay-2 text-white/75 text-[14px] sm:text-[16px] leading-relaxed mb-6 sm:mb-10 max-w-xl">
+                      <p className="animate-fade-in-up-delay-2 text-gray-600 text-[14px] sm:text-[16px] leading-relaxed mb-6 sm:mb-10 max-w-xl">
                         {slide.description}
                       </p>
                     </>
@@ -472,11 +463,10 @@ export function App() {
                 </div>
               ))}
 
-              {/* CTAs */}
               <div className="animate-fade-in-up-delay-3 flex flex-col sm:flex-row gap-3 sm:gap-4 mb-8 sm:mb-14">
                 <a
                   href="#packages"
-                  className="group relative px-7 sm:px-9 py-3.5 sm:py-4 rounded-full bg-gradient-to-r from-accent to-accent2 text-white font-bold text-[14px] sm:text-[15px] shadow-xl shadow-blue-600/30 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 overflow-hidden text-center"
+                  className="group relative px-7 sm:px-9 py-3.5 sm:py-4 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold text-[14px] sm:text-[15px] shadow-xl shadow-blue-600/30 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 overflow-hidden text-center"
                 >
                   <span className="relative z-10">
                     Explore Packages{" "}
@@ -485,13 +475,12 @@ export function App() {
                 </a>
                 <a
                   href="#contact"
-                  className="px-7 sm:px-9 py-3.5 sm:py-4 rounded-full border-2 border-white/25 bg-white/[0.08] backdrop-blur-md text-white font-bold text-[14px] sm:text-[15px] hover:bg-white/[0.18] hover:-translate-y-1 transition-all duration-300 text-center"
+                  className="px-7 sm:px-9 py-3.5 sm:py-4 rounded-full border-2 border-blue-300 bg-white/90 backdrop-blur-md text-blue-700 font-bold text-[14px] sm:text-[15px] hover:bg-white hover:border-blue-400 hover:-translate-y-1 transition-all duration-300 text-center shadow-lg shadow-blue-100/30"
                 >
                   Request Pricing
                 </a>
               </div>
 
-              {/* Stats */}
               <div className="animate-fade-in-up-delay-4 grid grid-cols-3 gap-2 sm:gap-3 max-w-sm sm:max-w-lg">
                 {[
                   { val: "500+", label: "Radios Deployed" },
@@ -500,12 +489,12 @@ export function App() {
                 ].map((s, i) => (
                   <div
                     key={i}
-                    className="text-center px-2 py-3 sm:px-4 sm:py-4 rounded-xl sm:rounded-2xl border border-white/12 bg-white/[0.06] backdrop-blur-md"
+                    className="text-center px-2 py-3 sm:px-4 sm:py-4 rounded-xl sm:rounded-2xl border border-gray-200 bg-white/90 backdrop-blur-md shadow-lg shadow-gray-100/50"
                   >
-                    <span className="block text-white font-black text-[16px] sm:text-[22px] leading-none gradient-text">
+                    <span className="block font-black text-[16px] sm:text-[22px] leading-none bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
                       {s.val}
                     </span>
-                    <span className="block text-white/55 text-[10px] sm:text-[12px] font-medium mt-1 sm:mt-2">
+                    <span className="block text-gray-500 text-[10px] sm:text-[12px] font-medium mt-1 sm:mt-2">
                       {s.label}
                     </span>
                   </div>
@@ -515,7 +504,6 @@ export function App() {
           </div>
         </div>
 
-        {/* Slide indicators */}
         <div className="absolute bottom-20 sm:bottom-28 left-1/2 -translate-x-1/2 z-20 flex gap-2 sm:gap-3">
           {heroSlides.map((_, i) => (
             <button
@@ -523,18 +511,17 @@ export function App() {
               onClick={() => setActiveSlide(i)}
               className={`h-1.5 rounded-full transition-all duration-400 cursor-pointer ${
                 activeSlide === i
-                  ? "w-10 sm:w-12 bg-white"
-                  : "w-3 sm:w-4 bg-white/35 hover:bg-white/55"
+                  ? "w-10 sm:w-12 bg-blue-600"
+                  : "w-3 sm:w-4 bg-gray-300 hover:bg-gray-400"
               }`}
               aria-label={`Slide ${i + 1}`}
             />
           ))}
         </div>
 
-        {/* Scroll hint */}
         <a
           href="#features"
-          className="absolute bottom-6 sm:bottom-10 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-2 text-white/60 hover:text-white transition-colors"
+          className="absolute bottom-6 sm:bottom-10 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-2 text-gray-400 hover:text-blue-600 transition-colors"
           aria-label="Scroll down"
         >
           <span className="text-[9px] sm:text-[10px] font-bold tracking-[3px] uppercase">Discover</span>
@@ -791,7 +778,6 @@ export function App() {
             </Reveal>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 relative">
-              {/* Connecting line (desktop only) */}
               <div className="hidden md:block absolute top-[52px] left-[16%] right-[16%] h-[2px] bg-gradient-to-r from-accent via-purple to-accent2 opacity-20 z-0" />
 
               {steps.map((step, i) => (
@@ -835,7 +821,6 @@ export function App() {
               {testimonials.map((t, i) => (
                 <Reveal key={i} delay={i + 1}>
                   <div className="testimonial-card h-full flex flex-col">
-                    {/* Stars */}
                     <div className="flex gap-1 mb-4 sm:mb-5">
                       {[0, 1, 2, 3, 4].map((j) => (
                         <svg key={j} className="w-4 h-4 sm:w-5 sm:h-5 text-amber" fill="currentColor" viewBox="0 0 20 20">
@@ -905,7 +890,6 @@ export function App() {
           <div className={W}>
             <Reveal>
               <div className="relative rounded-2xl sm:rounded-[32px] overflow-hidden">
-                {/* Background */}
                 <div className="absolute inset-0 bg-gradient-to-br from-ink via-[#0f1b33] to-[#0a1628]" />
                 <div className="absolute inset-0 bg-[radial-gradient(600px_300px_at_20%_30%,rgba(37,99,235,0.2),transparent_60%)]" />
                 <div className="absolute inset-0 bg-[radial-gradient(600px_300px_at_80%_70%,rgba(34,197,94,0.12),transparent_60%)]" />
@@ -970,7 +954,6 @@ export function App() {
       <footer className="footer-gradient text-white pt-12 sm:pt-20 pb-6 sm:pb-8">
         <div className={W}>
           <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-8 sm:gap-10 md:gap-12 mb-10 sm:mb-16">
-            {/* Brand Column */}
             <div className="col-span-2 sm:col-span-2 md:col-span-1">
               <a href="#top" className="flex items-center gap-3 mb-4 sm:mb-5">
                 <span className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-br from-[#0d1528] to-[#1a2540] border border-white/10 flex items-center justify-center">
@@ -996,7 +979,6 @@ export function App() {
               </p>
             </div>
 
-            {/* Quick Links */}
             <div>
               <h4 className="font-bold text-[12px] sm:text-[13px] uppercase tracking-wider text-white/60 mb-4 sm:mb-5">Quick Links</h4>
               <ul className="space-y-2.5 sm:space-y-3">
@@ -1010,7 +992,6 @@ export function App() {
               </ul>
             </div>
 
-            {/* Solutions */}
             <div>
               <h4 className="font-bold text-[12px] sm:text-[13px] uppercase tracking-wider text-white/60 mb-4 sm:mb-5">Solutions</h4>
               <ul className="space-y-2.5 sm:space-y-3">
@@ -1022,7 +1003,6 @@ export function App() {
               </ul>
             </div>
 
-            {/* Contact */}
             <div className="col-span-2 sm:col-span-1">
               <h4 className="font-bold text-[12px] sm:text-[13px] uppercase tracking-wider text-white/60 mb-4 sm:mb-5">Contact</h4>
               <ul className="space-y-2.5 sm:space-y-3 text-white/40 text-[13px] sm:text-[14px]">
@@ -1042,7 +1022,6 @@ export function App() {
             </div>
           </div>
 
-          {/* Bottom bar */}
           <div className="border-t border-white/[0.08] pt-6 sm:pt-8 flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4">
             <span className="text-white/30 text-[12px] sm:text-[13px]">
               © {new Date().getFullYear()} Copy That. All rights reserved.
